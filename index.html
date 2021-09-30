@@ -24,7 +24,21 @@
   
   
   
-  
+  <style>
+    .bigger {
+        font-size: 2.5em;
+    }
+</style>
+  <script language="JavaScript">
+    function changeStuff() {
+        business = document.getElementById("business");
+        business.className = "bigger";
+    } 
+    function undochangeStuff() {
+        business = document.getElementById("business");
+        business.className = "";
+    }
+</script>
 </head>
 <body>
   
@@ -67,7 +81,7 @@
     <div class="align-center container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
-                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>Who says you can't mix business and pleasure? ;)</strong></h1>
+                <h1 id="business" onmouseover="javascript:changeStuff()" onmouseout="javascript:undochangeStuff()" class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>Who says you can't mix business and pleasure? ;)</strong></h1>
                 
                 <p class="mbr-text mbr-fonts-style mb-3 display-7">Business and Pleasure is a free online website that offers many different services to assist you in planning your trip.&nbsp;Whether you need a hotel or Air BNB, travel guides or creative control, business or pleasure, or countless other details regarding your trip, we have you covered for any destination imaginable. Your Next Adventure will make this a stress-free planning experience! From transportation to dining to any detail imaginable, we got you covered!</p>
                 
